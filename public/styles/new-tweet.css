@@ -1,0 +1,32 @@
+.new-tweet {
+  width: 100%;
+}
+
+.new-tweet form {
+  margin-top: 20px; 
+}
+
+.new-tweet textarea {
+  width: 100%;
+  background: #f4f1ec;
+  border-color: #545149;
+  border-width: 0 0 5px 0;
+  resize: none;
+  line-height: 15px;
+  padding-top: 20px;
+  font-weight: bold;
+}
+
+.form-subcontainer{
+  margin-top: 10px;
+  font-family: 'Bungee', cursive, sans-serif;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.form-subcontainer button {
+  background: #4056A1;
+  color: #FFFFFF;
+  border: none;
+}
