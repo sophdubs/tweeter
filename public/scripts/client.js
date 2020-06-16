@@ -56,4 +56,21 @@ $(document).ready(() => {
   const tweetObjArr = data.map( tweet => createTweetElement(tweet));
   renderTweets(tweetObjArr);
 
+  $('form').on('submit', function(event) {
+    event.preventDefault();
+    const serializedTweet = $(this).serialize();
+    console.log(serializedTweet);
+
+    $.ajax('/tweets', { type: 'POST', data: serializedTweet })
+      .then(() => {
+        console.log('done?');
+      })
+      .catch(() => {
+        console.log('something went wrong..');
+      });
+    
+
+
+  })
+
 });
