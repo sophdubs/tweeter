@@ -26,6 +26,7 @@
   align-items: center;
 }
 
+/* Maybe use class here */
 .tweet header span img {
   margin-right: 10px;
 }
