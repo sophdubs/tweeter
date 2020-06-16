@@ -30,3 +30,7 @@
   color: #FFFFFF;
   border: none;
 }
+
+.form-subcontainer .under-zero {
+  color: red;
+}
