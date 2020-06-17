@@ -10,16 +10,19 @@
   color: #FFFFFF;
 }
 
+header h2 {
+  margin: 10px 0px;
+}
+
 
 @media only screen and (min-width: 1024px) {
   .page-header {
     display: flex;
-    position: sticky;
     top: 120px;
     left: 0;
     width: 50%;
     height: calc(100vh - 120px);
+    position: sticky;
     overflow: hidden;
-    
   }
 }
