@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/main.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
     <link rel="stylesheet" href="/styles/tweet-section.css" type="text/css" />
     <link rel="stylesheet" href="/styles/error.css" type="text/css" />
@@ -29,36 +30,39 @@
       <span class="compose">Write a new tweet  >></span>
     </nav>
 
-    <header class="page-header">
-      <div>
-        <img src="/images/profile-hex.png">
-      </div>
-      <br>
-      <div>
-        <h2>Sophie Dubois</h2>
-      </div>
-    </header>
+    <div class="responsive-body">
 
-    <main class="container">
+      <header class="page-header">
+        <div>
+          <img src="/images/profile-hex.png">
+        </div>
+        <br>
+        <div>
+          <h2>Sophie Dubois</h2>
+        </div>
+      </header>
       
-      <div class="error-div"></div>
+      <main class="container">
+        
+        <div class="error-div"></div>
+        
+        <section class="new-tweet">
+          <form action="/tweets" method="post">
+            <textarea name="text" id="tweet-text" class="tweet-text-area" placeholder="What are you humming about?"></textarea>
+            <div class="form-subcontainer">
+              <button type="submit">Tweet</button>
+              <output name="counter" class="counter" for="tweet-text">140</output>
+            </div>
+          </form>
+        </section>
+        
+        <section class="tweet-section">
+          
+        </section>
+        
+      </main>
+    </div>
       
-      <section class="new-tweet">
-        <form action="/tweets" method="post">
-          <textarea name="text" id="tweet-text" class="tweet-text-area" placeholder="What are you humming about?"></textarea>
-          <div class="form-subcontainer">
-            <button type="submit">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text">140</output>
-          </div>
-        </form>
-      </section>
-
-      <section class="tweet-section">
-
-      </section>
-
-    </main>
-
     <script src="/scripts/composer-char-counter.js"></script>
     <script src="/scripts/client.js"></script>
   </body>
