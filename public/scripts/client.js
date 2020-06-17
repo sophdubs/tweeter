@@ -47,10 +47,14 @@ $(document).ready(() => {
 
   $('form').on('submit', function(event) {
     event.preventDefault();
-    // 
+   
     if (!$('#tweet-text').val().length || $('#tweet-text').val().length > 140) {
-      $('#tweet-text').val().length > 140 ? alert('Too many characters') : alert('Tweet cannot be empty');
+      $('.error-div').append(`<p>🚨 ${$('#tweet-text').val().length > 140 ? 'Error: Please respect the 140 character limit' : 'Error: Tweet can not be empty'} 🚨</p>`)
+      $('.error-div').slideDown('slow');
       return;
+    } else {
+      $('.error-div').empty();
+      $('.error-div').hide();
     };
 
     const serializedTweet = $(this).serialize();
