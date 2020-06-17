@@ -8,13 +8,19 @@ const createTweetElement = tweetObj => {
     <span class="username">${tweetObj.user.handle}</span>
   </header>
   <main>
-    <p>${tweetObj.content.text}</p>
+    <p>${escape(tweetObj.content.text)}</p>
   </main>
   <footer>
     <span>${tweetObj.created_at}</span>
     <span>⛳ ⤵ 💟 </span>
   </footer>
 </article>`;
+};
+
+const escape = function(str) {
+  let div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
 };
 
 const renderTweets = tweetObjArr => {
