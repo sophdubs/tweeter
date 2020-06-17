@@ -24,37 +24,20 @@ const renderTweets = tweetObjArr => {
   })
 };
 
-
-// What tweetObjects data looks like:
-const data = [
-  {
-    "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png"
-      ,
-      "handle": "@SirIsaac"
-    },
-    "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-    "created_at": 1461116232227
-  },
-  {
-    "user": {
-      "name": "Descartes",
-      "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd" },
-    "content": {
-      "text": "Je pense , donc je suis"
-    },
-    "created_at": 1461113959088
-  }
-]
+const loadTweets = function() {
+  $.ajax('/tweets', { type: 'GET' })
+    .then((data) => {
+      const tweetObjArray = data.map( tweet => createTweetElement(tweet));
+      renderTweets(tweetObjArray);
+    })
+    .catch(() => {
+      console.log('an error occured');
+    })
+};
 
 $(document).ready(() => {
   
-  const tweetObjArr = data.map( tweet => createTweetElement(tweet));
-  renderTweets(tweetObjArr);
+  loadTweets();
 
   $('form').on('submit', function(event) {
     event.preventDefault();
@@ -68,9 +51,5 @@ $(document).ready(() => {
       .catch(() => {
         console.log('something went wrong..');
       });
-    
-
-
-  })
-
+  });
 });
