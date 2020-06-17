@@ -20,7 +20,7 @@ const createTweetElement = tweetObj => {
 const renderTweets = tweetObjArr => {
   const section = $('.tweet-section');
   tweetObjArr.forEach(tweetObj => {
-    section.append(tweetObj);
+    section.prepend(tweetObj);
   })
 };
 
@@ -46,11 +46,14 @@ $(document).ready(() => {
       $('#tweet-text').val().length > 140 ? alert('Too many characters') : alert('Tweet cannot be empty');
       return;
     };
+
     const serializedTweet = $(this).serialize();
 
     $.ajax('/tweets', { type: 'POST', data: serializedTweet })
       .then(() => {
-        console.log('done?');
+        loadTweets();
+        $('#tweet-text').val('');
+        console.log('done');
       })
       .catch(() => {
         console.log('something went wrong..');
