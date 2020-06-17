@@ -41,8 +41,12 @@ $(document).ready(() => {
 
   $('form').on('submit', function(event) {
     event.preventDefault();
+    // 
+    if (!$('#tweet-text').val().length || $('#tweet-text').val().length > 140) {
+      $('#tweet-text').val().length > 140 ? alert('Too many characters') : alert('Tweet cannot be empty');
+      return;
+    };
     const serializedTweet = $(this).serialize();
-    console.log(serializedTweet);
 
     $.ajax('/tweets', { type: 'POST', data: serializedTweet })
       .then(() => {
