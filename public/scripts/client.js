@@ -11,7 +11,7 @@ const createTweetElement = tweetObj => {
     <p>${escape(tweetObj.content.text)}</p>
   </main>
   <footer>
-    <span>${tweetObj.created_at}</span>
+    <span>${moment(tweetObj.created_at).fromNow()}</span>
     <span><i class="fa fa-flag" aria-hidden="true"></i><i class="fa fa-retweet" aria-hidden="true"></i><i class="fa fa-heart" aria-hidden="true"></i></span>
   </footer>
 </article>`;
