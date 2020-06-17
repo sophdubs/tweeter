@@ -25,6 +25,7 @@ const escape = function(str) {
 
 const renderTweets = tweetObjArr => {
   const section = $('.tweet-section');
+  section.empty();
   tweetObjArr.forEach(tweetObj => {
     section.prepend(tweetObj);
   })
@@ -49,7 +50,7 @@ $(document).ready(() => {
     event.preventDefault();
    
     if (!$('#tweet-text').val().length || $('#tweet-text').val().length > 140) {
-      $('.error-div').append(`<p>🚨 ${$('#tweet-text').val().length > 140 ? 'Error: Please respect the 140 character limit' : 'Error: Tweet can not be empty'} 🚨</p>`)
+      $('.error-div').append(`<p>🚨 ${$('#tweet-text').val().length > 140 ? 'Error: Please spect the 140 character limit' : 'Error: Tweet can not be empty'} 🚨</p>`)
       $('.error-div').slideDown('slow');
       return;
     } else {
