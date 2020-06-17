@@ -73,6 +73,10 @@ $(document).ready(() => {
   });
 
   $('.compose').on('click', function(event) {
-    $('.new-tweet').slideDown('slow');
+    if ($('.new-tweet').css('display') === 'none') {
+      $('.new-tweet').slideDown('slow');
+    } else {
+      $('.new-tweet').slideUp('slow');
+    }
   });
 });
