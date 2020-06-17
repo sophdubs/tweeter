@@ -61,3 +61,7 @@
 .tweet:hover .username {
   color: rgb(173, 189, 230);
 }
+
+footer .fa {
+  margin-left: 8px;
+}

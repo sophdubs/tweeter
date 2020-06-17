@@ -12,7 +12,7 @@ const createTweetElement = tweetObj => {
   </main>
   <footer>
     <span>${tweetObj.created_at}</span>
-    <span>⛳ ⤵ 💟 </span>
+    <span><i class="fa fa-flag" aria-hidden="true"></i><i class="fa fa-retweet" aria-hidden="true"></i><i class="fa fa-heart" aria-hidden="true"></i></span>
   </footer>
 </article>`;
 };
