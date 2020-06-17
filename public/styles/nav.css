@@ -7,4 +7,15 @@ nav {
   font-family: 'Bungee', cursive, sans-serif;
   position: sticky;
   top: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.compose {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.compose:hover {
+  cursor: pointer;
 }

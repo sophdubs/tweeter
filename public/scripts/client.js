@@ -62,6 +62,7 @@ $(document).ready(() => {
 
     $.ajax('/tweets', { type: 'POST', data: serializedTweet })
       .then(() => {
+        $('.new-tweet').slideUp('slow');
         loadTweets();
         $('#tweet-text').val('');
         console.log('done');
@@ -69,5 +70,9 @@ $(document).ready(() => {
       .catch(() => {
         console.log('something went wrong..');
       });
+  });
+
+  $('.compose').on('click', function(event) {
+    $('.new-tweet').slideDown('slow');
   });
 });

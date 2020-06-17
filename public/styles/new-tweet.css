@@ -17,6 +17,10 @@
   font-weight: bold;
 }
 
+.new-tweet {
+  display: none;
+}
+
 .form-subcontainer{
   margin-top: 10px;
   font-family: 'Bungee', cursive, sans-serif;
