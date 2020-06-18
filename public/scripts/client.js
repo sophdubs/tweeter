@@ -50,22 +50,22 @@ $(document).ready(() => {
     event.preventDefault();
    
     if (!$('#tweet-text').val().length || $('#tweet-text').val().length > 140) {
+      $('.error-div').empty();
       $('.error-div').append(`<p><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> ${$('#tweet-text').val().length > 140 ? 'Error: Please spect the 140 character limit' : 'Error: Tweet can not be empty'} <i class="fa fa-exclamation-triangle" aria-hidden="true"></i></p>`)
       $('.error-div').slideDown('slow');
       return;
     } else {
+      $('.error-div').slideUp('slow');
       $('.error-div').empty();
-      $('.error-div').hide();
     };
 
     const serializedTweet = $(this).serialize();
 
     $.ajax('/tweets', { type: 'POST', data: serializedTweet })
       .then(() => {
-        $('.new-tweet').slideUp('slow');
+        $('.counter').html(140);
         loadTweets();
         $('#tweet-text').val('');
-        console.log('done');
       })
       .catch(() => {
         console.log('something went wrong..');
@@ -75,6 +75,7 @@ $(document).ready(() => {
   $('.compose').on('click', function(event) {
     if ($('.new-tweet').css('display') === 'none') {
       $('.new-tweet').slideDown('slow');
+      $('#tweet-text').focus();
     } else {
       $('.new-tweet').slideUp('slow');
     }
