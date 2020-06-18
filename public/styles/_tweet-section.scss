@@ -1,10 +1,12 @@
+@use 'variables' as v;
+
 .tweet-section {
   display: flex;
   flex-direction: column;
 }
 
 .tweet {
-  border: 5px solid #545149;
+  border: 5px solid v.$secondary-font-color;
   margin-top: 10px;
   margin-bottom: 10px;
   padding: 10px;
@@ -23,12 +25,13 @@
 
   main {
     width: 100%;
-    border-bottom: 5px solid #545149;
+    border-bottom: 5px solid v.$secondary-font-color;
 
     p{
-      color: #545149;
+      color: v.$secondary-font-color;
       font-weight: bold;
       padding: 20px;
+      word-wrap: break-word;
     }
   }
 
@@ -41,10 +44,10 @@
   }
 
   &:hover {
-    box-shadow:10px 10px rgb(173, 189, 230); 
+    box-shadow:10px 10px v.$secondary-color; 
 
     .username {
-      color: rgb(173, 189, 230);
+      color: v.$secondary-color;
     }
   }
 }
@@ -54,7 +57,7 @@
 }
 
 .username {
-  color: rgba(173, 189, 230, 0);
+  color: v.$secondary-font-color;
 }
 
 footer {
@@ -63,11 +66,11 @@ footer {
   }
 
   .clicked {
-    color: rgb(173, 189, 230)
+    color: v.$secondary-color;
   }
 }
 
 .footer-icon:hover {
   cursor: pointer;
-  color: rgb(173, 189, 230)
+  color: v.$secondary-color;
 }

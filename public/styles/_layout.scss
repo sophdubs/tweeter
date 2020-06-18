@@ -1,3 +1,5 @@
+@use 'variables' as v;
+
 html {
   box-sizing: border-box;
 }
@@ -7,9 +9,9 @@ html {
 
 body {
   color: #545149;
-  background-color: #f4f1ec;
+  background-color: v.$background-color;
   font-size: 24px;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: v.$secondary-font;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -17,7 +19,7 @@ body {
 
 main {
   width: 90%;
-  background-color:#f4f1ec;
+  background-color:v.$background-color;
   margin: auto;
 }
 

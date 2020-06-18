@@ -1,3 +1,5 @@
+@use 'variables' as v;
+
 .new-tweet {
   width: 100%;
   margin-top: 20px;
@@ -6,8 +8,8 @@
 
   textarea {
     width: 100%;
-    background: #f4f1ec;
-    border-color: #545149;
+    background: v.$background-color;
+    border-color: v.$secondary-font-color;
     border-width: 0 0 5px 0;
     resize: none;
     line-height: 30px;
@@ -27,12 +29,12 @@
   justify-content: space-between;
 
   button {
-    background: #4056A1;
-    color: #FFFFFF;
+    background: v.$primary-color;
+    color: v.$primary-font-color;
     border: none;
   }
 
   .under-zero {
-    color: red;
+    color: v.$error-color;
   }
 }

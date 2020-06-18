@@ -83,8 +83,8 @@ header h2 {
 button.back-to-top {
   border-radius: 50%;
   border: none;
-  background-color: #4280cb;
-  color: white;
+  background-color: #4056A1;
+  color: #FFFFFF;
   position: fixed;
   bottom: 0px;
   right: 0px;
@@ -93,7 +93,7 @@ button.back-to-top {
 }
 button.back-to-top:hover {
   cursor: pointer;
-  background-color: #9baedf;
+  background-color: #748ad7;
 }
 
 nav {
@@ -190,6 +190,7 @@ nav {
   color: #545149;
   font-weight: bold;
   padding: 20px;
+  word-wrap: break-word;
 }
 .tweet footer {
   display: flex;
@@ -199,10 +200,10 @@ nav {
   padding: 15px;
 }
 .tweet:hover {
-  box-shadow: 10px 10px #adbde6;
+  box-shadow: 10px 10px #748ad7;
 }
 .tweet:hover .username {
-  color: #adbde6;
+  color: #748ad7;
 }
 
 .avatar {
@@ -210,19 +211,19 @@ nav {
 }
 
 .username {
-  color: rgba(173, 189, 230, 0);
+  color: #545149;
 }
 
 footer .fa {
   margin-left: 8px;
 }
 footer .clicked {
-  color: #adbde6;
+  color: #748ad7;
 }
 
 .footer-icon:hover {
   cursor: pointer;
-  color: #adbde6;
+  color: #748ad7;
 }
 
 /*# sourceMappingURL=index.css.map */

@@ -1,3 +1,5 @@
+@use 'variables' as v;
+
 @media only screen and (min-width: 1024px) {
   .container {
     width: 60%;
@@ -9,8 +11,8 @@
 button.back-to-top {
   border-radius: 50%;
   border: none;
-  background-color: rgb(66, 128, 203);
-  color: white;
+  background-color: v.$primary-color;
+  color: v.$primary-font-color;
   position: fixed;
   bottom: 0px;
   right: 0px;
@@ -19,6 +21,6 @@ button.back-to-top {
   
   &:hover{
     cursor: pointer;
-    background-color: rgb(155, 174, 223);
+    background-color: v.$secondary-color;
   } 
 }
