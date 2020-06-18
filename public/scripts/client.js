@@ -87,4 +87,9 @@ $(document).ready(() => {
       $('.back-to-top').css('display', 'block');
     }
   });
+
+  $('.back-to-top').on('click', () => {
+    $(window).scrollTop(0);
+  });
+  
 });
