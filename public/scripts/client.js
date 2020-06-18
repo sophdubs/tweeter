@@ -71,6 +71,7 @@ $(document).ready(() => {
   const compose = $('.compose');
   const tweetForm = $('.new-tweet');
   const scrollBtn = $('.back-to-top');
+  const composeIcon = $('.compose-icon');
   
   // triggers an ajax fetch on page load to display tweets
   loadTweets();
@@ -95,7 +96,7 @@ $(document).ready(() => {
     // Form submission validation: textarea value cannot have 0 or over 140 chars
     if (!textArea.val().length || textArea.val().length > 140) {
       errorDiv.empty();
-      errorDiv.append(`<p><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> ${$('#tweet-text').val().length > 140 ? 'Error: Please spect the 140 character limit' : 'Error: Tweet can not be empty'} <i class="fa fa-exclamation-triangle" aria-hidden="true"></i></p>`)
+      errorDiv.append(`<p><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> ${$('#tweet-text').val().length > 140 ? 'Error: Please respect the 140 character limit' : 'Error: Tweet can not be empty'} <i class="fa fa-exclamation-triangle" aria-hidden="true"></i></p>`)
       errorDiv.slideDown('slow');
       return;
     } else {
@@ -123,11 +124,16 @@ $(document).ready(() => {
   // Event handler for the compose new tweet button
   compose.on('click', function(event) {
     // If new-tweet form is hidden, show it, else hide it
+    // Icon changes from down arrow when form is hidden to up arrow when form is shown
     if (tweetForm.css('display') === 'none') {
       tweetForm.slideDown('slow');
       textArea.focus();
+      composeIcon.toggleClass('fa-angle-double-down');
+      composeIcon.toggleClass('fa-angle-double-up');
     } else {
       tweetForm.slideUp('slow');
+      composeIcon.toggleClass('fa-angle-double-down');
+      composeIcon.toggleClass('fa-angle-double-up');
     }
   });
 
