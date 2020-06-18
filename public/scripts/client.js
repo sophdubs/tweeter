@@ -3,7 +3,7 @@ const createTweetElement = tweetObj => {
   return `<article class="tweet">
   <header>
     <span>
-      <img src="${tweetObj.user.avatars}">
+      <img src="${tweetObj.user.avatars}" class="avatar">
       <span>${tweetObj.user.name}</span>
     </span>
     <span class="username">${tweetObj.user.handle}</span>

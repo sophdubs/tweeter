@@ -23,8 +23,7 @@
   align-items: center;
 }
 
-/* Maybe use class here */
-.tweet header span img {
+.avatar {
   margin-right: 10px;
 }
 
