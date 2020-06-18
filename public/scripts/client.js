@@ -79,4 +79,12 @@ $(document).ready(() => {
       $('.new-tweet').slideUp('slow');
     }
   });
+
+  $(document).on('scroll', (event) => {
+    if ($(window).scrollTop() === 0) {
+      $('.back-to-top').css('display', 'none');
+    } else {
+      $('.back-to-top').css('display', 'block');
+    }
+  });
 });
