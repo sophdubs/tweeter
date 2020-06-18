@@ -23,6 +23,10 @@
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.26.0/moment-with-locales.min.js"></script>
+    <script>moment().format();</script>
+    <!-- Local JS -->
+    <script src="/scripts/client.js"></script>
   </head>
 
   <body>
@@ -35,6 +39,7 @@
       </span>
     </nav>
 
+    <!-- Added this div container to be able to manipulate it at different breakpoints -->
     <div class="responsive-body">
 
       <header class="page-header">
@@ -68,9 +73,5 @@
       </main>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.26.0/moment-with-locales.min.js"></script>
-    <script>moment().format();</script>
-    <script src="/scripts/composer-char-counter.js"></script>
-    <script src="/scripts/client.js"></script>
   </body>
 </html>
