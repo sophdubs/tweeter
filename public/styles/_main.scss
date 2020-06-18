@@ -16,9 +16,9 @@ button.back-to-top {
   right: 0px;
   margin: 10px;
   display: none;
-}
-
-button.back-to-top:hover {
-  cursor: pointer;
-  background-color: rgb(155, 174, 223);
+  
+  &:hover{
+    cursor: pointer;
+    background-color: rgb(155, 174, 223);
+  } 
 }

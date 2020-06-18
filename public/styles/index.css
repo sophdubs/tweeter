@@ -1,0 +1,228 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  color: #545149;
+  background-color: #f4f1ec;
+  font-size: 24px;
+  font-family: "Source Sans Pro", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main {
+  width: 90%;
+  background-color: #f4f1ec;
+  margin: auto;
+}
+
+.responsive-body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media only screen and (min-width: 1024px) {
+  .responsive-body {
+    display: flex;
+    flex-direction: row;
+  }
+}
+.page-header {
+  height: 400px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #748ad7;
+  background-image: url(../images/black-thread-light.png);
+  color: #FFFFFF;
+  margin-bottom: 30px;
+}
+
+header h2 {
+  margin: 10px 0px;
+}
+
+@media only screen and (min-width: 1024px) {
+  .page-header {
+    display: flex;
+    top: 120px;
+    left: 0;
+    width: 50%;
+    height: calc(100vh - 120px);
+    position: sticky;
+    overflow: hidden;
+    margin-bottom: 0;
+  }
+}
+.error-div {
+  width: 90%;
+  margin: 0px auto 30px;
+  text-align: center;
+  border: 1px solid red;
+  color: red;
+  display: none;
+}
+
+@media only screen and (min-width: 1024px) {
+  .container {
+    width: 60%;
+    margin: 30px;
+    overflow: auto;
+  }
+}
+button.back-to-top {
+  border-radius: 50%;
+  border: none;
+  background-color: #4280cb;
+  color: white;
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  margin: 10px;
+  display: none;
+}
+button.back-to-top:hover {
+  cursor: pointer;
+  background-color: #9baedf;
+}
+
+nav {
+  height: 120px;
+  width: 100%;
+  background: #4056A1;
+  color: #FFFFFF;
+  padding: 1.5em;
+  font-family: "Bungee", cursive, sans-serif;
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.compose {
+  font-family: "Source Sans Pro", sans-serif;
+  text-align: center;
+  transition: all 0.2s ease-in-out;
+}
+.compose p {
+  margin: 0;
+}
+.compose:hover {
+  cursor: pointer;
+}
+.compose:hover i {
+  color: orange;
+  transform: scale(1.5);
+}
+
+.new-tweet {
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: none;
+}
+.new-tweet textarea {
+  width: 100%;
+  background: #f4f1ec;
+  border-color: #545149;
+  border-width: 0 0 5px 0;
+  resize: none;
+  line-height: 30px;
+  font-weight: bold;
+}
+.new-tweet textarea:focus {
+  outline: none;
+}
+
+.form-subcontainer {
+  margin-top: 10px;
+  font-family: "Bungee", cursive, sans-serif;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.form-subcontainer button {
+  background: #4056A1;
+  color: #FFFFFF;
+  border: none;
+}
+.form-subcontainer .under-zero {
+  color: red;
+}
+
+.tweet-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.tweet {
+  border: 5px solid #545149;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+.tweet header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 5px;
+}
+.tweet header span {
+  display: flex;
+  align-items: center;
+}
+.tweet main {
+  width: 100%;
+  border-bottom: 5px solid #545149;
+}
+.tweet main p {
+  color: #545149;
+  font-weight: bold;
+  padding: 20px;
+}
+.tweet footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 13px;
+  padding: 15px;
+}
+.tweet:hover {
+  box-shadow: 10px 10px #adbde6;
+}
+.tweet:hover .username {
+  color: #adbde6;
+}
+
+.avatar {
+  margin-right: 10px;
+}
+
+.username {
+  color: rgba(173, 189, 230, 0);
+}
+
+footer .fa {
+  margin-left: 8px;
+}
+footer .clicked {
+  color: #adbde6;
+}
+
+.footer-icon:hover {
+  cursor: pointer;
+  color: #adbde6;
+}
+
+/*# sourceMappingURL=index.css.map */
