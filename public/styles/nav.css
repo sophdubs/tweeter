@@ -14,8 +14,19 @@ nav {
 
 .compose {
   font-family: 'Source Sans Pro', sans-serif;
+  text-align: center;
+  transition: all .2s ease-in-out;
+}
+
+.compose p {
+  margin: 0;
 }
 
 .compose:hover {
   cursor: pointer;
+}
+
+.compose:hover i {
+  color: orange;
+  transform: scale(1.5);
 }
