@@ -50,7 +50,7 @@ $(document).ready(() => {
     event.preventDefault();
    
     if (!$('#tweet-text').val().length || $('#tweet-text').val().length > 140) {
-      $('.error-div').append(`<p>🚨 ${$('#tweet-text').val().length > 140 ? 'Error: Please spect the 140 character limit' : 'Error: Tweet can not be empty'} 🚨</p>`)
+      $('.error-div').append(`<p><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> ${$('#tweet-text').val().length > 140 ? 'Error: Please spect the 140 character limit' : 'Error: Tweet can not be empty'} <i class="fa fa-exclamation-triangle" aria-hidden="true"></i></p>`)
       $('.error-div').slideDown('slow');
       return;
     } else {
