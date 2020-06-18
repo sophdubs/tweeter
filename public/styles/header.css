@@ -8,6 +8,7 @@
   background-color:rgb(116, 138, 215);
   background-image: url(../images/black-thread-light.png);
   color: #FFFFFF;
+  margin-bottom: 30px;
 }
 
 header h2 {
@@ -23,5 +24,6 @@ header h2 {
     height: calc(100vh - 120px);
     position: sticky;
     overflow: hidden;
+    margin-bottom: 0;
   }
 }
