@@ -13,7 +13,7 @@ const createTweetElement = tweetObj => {
   </main>
   <footer>
     <span>${moment(tweetObj.created_at).fromNow()}</span>
-    <span><i class="fa fa-flag" aria-hidden="true"></i><i class="fa fa-retweet" aria-hidden="true"></i><i class="fa fa-heart" aria-hidden="true"></i></span>
+    <span><i class="fa fa-flag footer-icon" aria-hidden="true"></i><i class="fa fa-retweet footer-icon" aria-hidden="true"></i><i class="fa fa-heart footer-icon" aria-hidden="true"></i></span>
   </footer>
 </article>`;
 };
@@ -25,6 +25,17 @@ const escape = function(str) {
   return div.innerHTML;
 };
 
+// Add event listener on 'flag, retweet, like' icons to toggle 'clicked' class on click
+// Triggers a style change, so user can see which tweets he liked/flagged/retweeted
+const registerFooterIcons = function() {
+  const footerIcons = $('.footer-icon');
+  $.each(footerIcons, function(index, icon) {
+    $(icon).on('click', function() {
+      $(icon).toggleClass('clicked');
+    })
+  })
+};
+
 // Takes in an array of tweets and prepends them all to the tweet section container
 const renderTweets = tweetObjArr => {
   const section = $('.tweet-section');
@@ -33,6 +44,7 @@ const renderTweets = tweetObjArr => {
   tweetObjArr.forEach(tweetObj => {
     section.prepend(tweetObj);
   })
+  registerFooterIcons();
 };
 
 // Makes ajax GET request to fetch the existing tweets from the 'database'
@@ -62,7 +74,7 @@ $(document).ready(() => {
   
   // triggers an ajax fetch on page load to display tweets
   loadTweets();
-
+  
   // Event handler for keyup in text area. 
   // Updates the character count
   // Adds class 'under-zero' whe more than 140 chars are typed, which triggers a style change in the css
@@ -134,5 +146,4 @@ $(document).ready(() => {
   scrollBtn.on('click', () => {
     $(window).scrollTop(0);
   });
-  
 });

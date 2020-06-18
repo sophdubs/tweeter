@@ -61,3 +61,12 @@
 footer .fa {
   margin-left: 8px;
 }
+
+.footer-icon:hover {
+  cursor: pointer;
+  color: rgb(173, 189, 230)
+}
+
+footer .clicked {
+  color: rgb(173, 189, 230)
+}
