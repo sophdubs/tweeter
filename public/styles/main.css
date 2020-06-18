@@ -5,3 +5,20 @@
     overflow: auto;
   }
 }
+
+button.back-to-top {
+  border-radius: 50%;
+  border: none;
+  background-color: rgb(66, 128, 203);
+  color: white;
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  margin: 30px;
+  display: none;
+}
+
+button.back-to-top:hover {
+  cursor: pointer;
+  background-color: rgb(155, 174, 223);
+}
