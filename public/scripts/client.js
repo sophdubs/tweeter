@@ -20,7 +20,7 @@ const createTweetElement = tweetObj => {
 
 // Escape the string to avoid XSS attacks
 const escape = function(str) {
-  let div = document.createElement('div');
+  const div = document.createElement('div');
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
 };
