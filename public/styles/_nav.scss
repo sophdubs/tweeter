@@ -14,7 +14,7 @@ nav {
   justify-content: space-between;
 
   .logo {
-    font-size: 2.5rem;
+    font-size: 2.6rem;
   }
 }
 
@@ -27,11 +27,14 @@ nav {
     margin: 0;
   }
 
+  i {
+    color: v.$accent-color;
+  }
+
   &:hover {
     cursor: pointer;
 
     i {
-      color: v.$accent-color;
       transform: scale(1.5);
     }
   }

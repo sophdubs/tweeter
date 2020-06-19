@@ -10,7 +10,7 @@ body {
   color: #545149;
   background-color: #f4f1ec;
   font-size: 1.5rem;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Montserrat", sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -42,7 +42,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #748ad7;
+  background-color: #b7e2e2;
   background-image: url(../images/black-thread-light.png);
   color: #FFFFFF;
   margin-bottom: 2rem;
@@ -79,7 +79,7 @@ main {
 
 @media only screen and (min-width: 1024px) {
   .container {
-    width: 60%;
+    width: 70%;
     margin: 2rem;
     overflow: auto;
     padding-left: 1rem;
@@ -89,7 +89,7 @@ main {
 button.back-to-top {
   border-radius: 50%;
   border: none;
-  background-color: #4056A1;
+  background-color: #3e919a;
   color: #FFFFFF;
   position: fixed;
   bottom: 0;
@@ -99,16 +99,16 @@ button.back-to-top {
 }
 button.back-to-top:hover {
   cursor: pointer;
-  background-color: #748ad7;
+  background-color: #b7e2e2;
 }
 
 nav {
   height: 7.5rem;
   width: 100%;
-  background: #4056A1;
+  background: #3e919a;
   color: #FFFFFF;
   padding: 1.5em;
-  font-family: "Bungee", cursive, sans-serif;
+  font-family: "Pacifico", cursive, sans-serif;
   position: sticky;
   top: 0;
   display: flex;
@@ -116,22 +116,24 @@ nav {
   justify-content: space-between;
 }
 nav .logo {
-  font-size: 2.5rem;
+  font-size: 2.6rem;
 }
 
 .compose {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Montserrat", sans-serif;
   text-align: center;
   transition: all 0.2s ease-in-out;
 }
 .compose p {
   margin: 0;
 }
+.compose i {
+  color: orange;
+}
 .compose:hover {
   cursor: pointer;
 }
 .compose:hover i {
-  color: orange;
   transform: scale(1.5);
 }
 
@@ -156,15 +158,21 @@ nav .logo {
 
 .form-subcontainer {
   margin-top: 0.625rem;
-  font-family: "Bungee", cursive, sans-serif;
+  font-family: "Pacifico", cursive, sans-serif;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 .form-subcontainer button {
-  background: #4056A1;
+  background: #3e919a;
   color: #FFFFFF;
   border: none;
+}
+.form-subcontainer button:hover {
+  cursor: pointer;
+}
+.form-subcontainer button:focus {
+  outline: none;
 }
 .form-subcontainer .under-zero {
   color: red;
@@ -209,10 +217,10 @@ nav .logo {
   padding: 1rem;
 }
 .tweet:hover {
-  box-shadow: 0.625rem 0.625rem #748ad7;
+  box-shadow: 0.625rem 0.625rem #b7e2e2;
 }
 .tweet:hover .username {
-  color: #748ad7;
+  color: #b7e2e2;
 }
 
 .avatar {
@@ -220,19 +228,19 @@ nav .logo {
 }
 
 .username {
-  color: #545149;
+  color: rgba(255, 255, 255, 0);
 }
 
 footer .fa {
   margin-left: 0.5rem;
 }
 footer .clicked {
-  color: #748ad7;
+  color: orange;
 }
 
 .footer-icon:hover {
   cursor: pointer;
-  color: #748ad7;
+  color: #b7e2e2;
 }
 
 /*# sourceMappingURL=index.css.map */

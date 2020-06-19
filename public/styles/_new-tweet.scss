@@ -32,6 +32,14 @@
     background: v.$primary-color;
     color: v.$primary-font-color;
     border: none;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:focus {
+      outline: none;
+    }
   }
 
   .under-zero {
