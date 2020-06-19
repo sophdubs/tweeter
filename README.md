@@ -4,6 +4,18 @@ Tweeter is a simple, responsive, single-page AJAX-based Twitter clone.
 
 ## Final Product
 
+This is the mobile view with the 'new tweet' form hidden
+
+!["mobile-view"](https://github.com/sophdubs/tweeter/blob/master/docs/mobile-view.png?raw=true)
+
+This is the desktop view with the 'new tweet' form visible
+
+!["desktop-view](https://github.com/sophdubs/tweeter/blob/master/docs/desktop-view.png?raw=true)
+
+This is the error message a user will see when submitting a tweet that is over the 140 character limit. A similar error message will be displayed if the user submits a blank tweet
+
+!["error-message"](https://github.com/sophdubs/tweeter/blob/master/docs/error-msg.png?raw=true)
+
 ## Dependencies
 - Node
 - Express
@@ -11,7 +23,6 @@ Tweeter is a simple, responsive, single-page AJAX-based Twitter clone.
 - Chance
 - md5
 - moment
-
 
 ## Getting Started
 1. Fork this repository, then clone your fork of this repository.
