@@ -8,9 +8,9 @@ html {
 }
 
 body {
-  color: #545149;
+  color: v.$secondary-font-color;
   background-color: v.$background-color;
-  font-size: 24px;
+  font-size: 1.5rem;
   font-family: v.$secondary-font;
   display: flex;
   flex-direction: column;

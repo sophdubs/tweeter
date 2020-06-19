@@ -9,7 +9,7 @@ html {
 body {
   color: #545149;
   background-color: #f4f1ec;
-  font-size: 24px;
+  font-size: 1.5rem;
   font-family: "Source Sans Pro", sans-serif;
   display: flex;
   flex-direction: column;
@@ -36,7 +36,7 @@ main {
   }
 }
 .page-header {
-  height: 400px;
+  height: 25rem;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -45,20 +45,20 @@ main {
   background-color: #748ad7;
   background-image: url(../images/black-thread-light.png);
   color: #FFFFFF;
-  margin-bottom: 30px;
+  margin-bottom: 2rem;
 }
 
 header h2 {
-  margin: 10px 0px;
+  margin: 0.625rem 0;
 }
 
 @media only screen and (min-width: 1024px) {
   .page-header {
     display: flex;
-    top: 120px;
+    top: 7.5rem;
     left: 0;
     width: 50%;
-    height: calc(100vh - 120px);
+    height: calc(100vh - 7.5rem);
     position: sticky;
     overflow: hidden;
     margin-bottom: 0;
@@ -66,18 +66,24 @@ header h2 {
 }
 .error-div {
   width: 90%;
-  margin: 0px auto 30px;
+  margin: 0px auto 2rem;
   text-align: center;
   border: 1px solid red;
   color: red;
   display: none;
 }
 
+main {
+  padding-bottom: 2rem;
+}
+
 @media only screen and (min-width: 1024px) {
   .container {
     width: 60%;
-    margin: 30px;
+    margin: 2rem;
     overflow: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }
 button.back-to-top {
@@ -86,9 +92,9 @@ button.back-to-top {
   background-color: #4056A1;
   color: #FFFFFF;
   position: fixed;
-  bottom: 0px;
-  right: 0px;
-  margin: 10px;
+  bottom: 0;
+  right: 0;
+  margin: 0.625rem;
   display: none;
 }
 button.back-to-top:hover {
@@ -97,7 +103,7 @@ button.back-to-top:hover {
 }
 
 nav {
-  height: 120px;
+  height: 7.5rem;
   width: 100%;
   background: #4056A1;
   color: #FFFFFF;
@@ -108,6 +114,9 @@ nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+nav .logo {
+  font-size: 2.5rem;
 }
 
 .compose {
@@ -128,8 +137,8 @@ nav {
 
 .new-tweet {
   width: 100%;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
   display: none;
 }
 .new-tweet textarea {
@@ -138,7 +147,7 @@ nav {
   border-color: #545149;
   border-width: 0 0 5px 0;
   resize: none;
-  line-height: 30px;
+  line-height: 1.875rem;
   font-weight: bold;
 }
 .new-tweet textarea:focus {
@@ -146,7 +155,7 @@ nav {
 }
 
 .form-subcontainer {
-  margin-top: 10px;
+  margin-top: 0.625rem;
   font-family: "Bungee", cursive, sans-serif;
   display: flex;
   flex-direction: row;
@@ -168,15 +177,15 @@ nav {
 
 .tweet {
   border: 5px solid #545149;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  padding: 10px;
+  margin-top: 0.625rem;
+  margin-bottom: 0.625rem;
+  padding: 0.625rem;
 }
 .tweet header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: 5px;
+  margin: 0.3rem;
 }
 .tweet header span {
   display: flex;
@@ -189,25 +198,25 @@ nav {
 .tweet main p {
   color: #545149;
   font-weight: bold;
-  padding: 20px;
+  padding: 1.25rem;
   word-wrap: break-word;
 }
 .tweet footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  font-size: 13px;
-  padding: 15px;
+  font-size: 0.8rem;
+  padding: 1rem;
 }
 .tweet:hover {
-  box-shadow: 10px 10px #748ad7;
+  box-shadow: 0.625rem 0.625rem #748ad7;
 }
 .tweet:hover .username {
   color: #748ad7;
 }
 
 .avatar {
-  margin-right: 10px;
+  margin-right: 0.625rem;
 }
 
 .username {
@@ -215,7 +224,7 @@ nav {
 }
 
 footer .fa {
-  margin-left: 8px;
+  margin-left: 0.5rem;
 }
 footer .clicked {
   color: #748ad7;

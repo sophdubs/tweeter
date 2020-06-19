@@ -1,10 +1,16 @@
 @use 'variables' as v;
 
+main {
+  padding-bottom: 2rem;
+}
+
 @media only screen and (min-width: 1024px) {
   .container {
     width: 60%;
-    margin: 30px;
+    margin: 2rem;
     overflow: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }
 
@@ -14,9 +20,9 @@ button.back-to-top {
   background-color: v.$primary-color;
   color: v.$primary-font-color;
   position: fixed;
-  bottom: 0px;
-  right: 0px;
-  margin: 10px;
+  bottom: 0;
+  right: 0;
+  margin: 0.625rem;
   display: none;
   
   &:hover{

@@ -2,8 +2,8 @@
 
 .new-tweet {
   width: 100%;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
   display: none;
 
   textarea {
@@ -12,7 +12,7 @@
     border-color: v.$secondary-font-color;
     border-width: 0 0 5px 0;
     resize: none;
-    line-height: 30px;
+    line-height: 1.875rem;
     font-weight: bold;
 
     &:focus {
@@ -22,8 +22,8 @@
 }
 
 .form-subcontainer{
-  margin-top: 10px;
-  font-family: 'Bungee', cursive, sans-serif;
+  margin-top: 0.625rem;
+  font-family: v.$primary-font;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
