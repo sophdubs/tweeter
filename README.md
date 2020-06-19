@@ -30,8 +30,14 @@ This is the error message a user will see when submitting a tweet that is over t
 3. Start the web server using the `npm start` command. The 
 
 ## Project Stack
-- HTML, CSS, JS, jQuery and AJAX on the client-side
+- HTML, CSS, SASS, JS, jQuery and AJAX on the client-side
 - Node, Express and a local object database on the server-side
+
+## Project Features
+- character counter
+- tweets displayed in reverse chronological order
+- responsive design
+- client side form validation & error messages
 
 ## Cusomizations
 - Form toggle button(STRETCH GOAL): Dom manipulation feature which, on the click of a button, slides the form down when it is not shown and slides it back up when it is shown. 
